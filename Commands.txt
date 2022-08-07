@@ -1,0 +1,50 @@
+[ArchLinux Commands]
+
+Being  linux distro many of your usualy commands will work in ArchLinux.
+However, being primarily a Windows and Ubuntu user for many years upon
+receiving my deck I had a few learning curves with just how stripped down
+SteamOS is. I have been introduced to this out of necessity from the need
+to customise my SteamDeck into a portable dev mahcine as well as gaming device. Despite the smallish screen the experience is actually far better than you'd think, and far more convenient for taking out on more social ventures rather than carrying a Laptop bag.
+
+The first important revelation to me was that SteamOS runs on the ArchLinux distro. I had known SteamOS runs on linux and became confused when my first update didn't work, in this case I checked the version of the distro with: uname -or
+
+Armed with this knowledge I set out to learn to install a package manager to begin my ventures into installing Docker and some developer tools. The SteamDeck itself allows for installation of VSCode from their flatpak Application library, however, node, docker, and many other tools we like to use are not. Luckily, Docker has docs on ArchLinus distibution installations, I am sat here now writing up this file on my own SteamDeck as we speak, as someone hard of sight the screen is actually just about the right size for me to still use comfortably.
+
+I will not list all of the basic commands in here, only those which differ from the likes of Ubuntu. It is important to note that VI is not installed bydefault, you can install this if you wish, but from the get-go you instead have access to VIM. Atop of this, Arch does not use apt to update and install packages instead relying on a package called pacman. Pacman will first need updating.
+
+[General]
+
+username -or  - find your linux distro name
+
+[Pacman]
+
+sudo pacman -S package - install packag
+sudo pacman -U package.tar - upgrade command for installing from tar
+
+[SystemCTL]
+
+sudo systemctl enable --now service.name
+
+[Administration]
+
+usermod -aG group user - add user to new group
+groupadd group - create a new group
+groupmod -n new_group old_group - modify an existing group
+groupdel group - delete a group
+gpasswd -d user group - remove user from group
+
+[VIM]
+
+i - INSERT
+:x - SAVE
+:w - SAVE AND EXIT
+:q - QUIT
+
+! - ADD FORCE
+
+[Steam Deck]
+
+qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logout - return to console mode
+sudo steamos-readonly disable - disable immutable filesystem
+
+STEAM_COMPAT_MOUNTS=/run/media/mmcblk0p1/ %command% - Proton launcher options
