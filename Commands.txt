@@ -48,3 +48,24 @@ qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logout - return to console mod
 sudo steamos-readonly disable - disable immutable filesystem
 
 STEAM_COMPAT_MOUNTS=/run/media/mmcblk0p1/ %command% - Proton launcher options
+
+
+
+
+# Increase SteamDeck Swap
+
+## Create a root password if you didn't already
+
+passwd <password>
+
+## disable read-only FS
+sudo steamos-readonly disable 
+
+## Edit the swapfile in use to use more memory
+cd /home
+
+sudo swapoff -a 
+sudo dd if=/dev/zero of=swapfile bs=1G count=16
+
+sudo mkswap swapfile
+sudo swapon swapfile
