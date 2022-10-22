@@ -1,0 +1,32 @@
+This has saved me from so much agony in online mode lol thank you so much! I've been using it for months. I wish I could use this in my steam deck :')
+
+UPDATE: After a lot of searching I figured out how to get this running on Steam Deck:
+
+First and foremost: make sure you already have RDR2 installed (no brainer)
+
+After downloading and installing the RDOLobbyManager from your browser on your steam deck desktop mode, make sure you have either the Bottles app or Wine installed along with Flatseal (you can get all of these via the Discover store in steam deck desktop mode).
+
+Open the Flatseal app and select one of the two previously mentioned applications (in my case I used Bottles so I will be explaining how I did it there)
+
+It will give you a big list of various permissions you can change. Scroll down to "Filesystem"
+
+In the Other files section put whatever path you want to have access to followed by :rw (this means you want it to be able to read and write here due to this path being naturally hidden in the steam deck directory), in this case it will be "/home/deck/.local/share/Steam/steamapps/common/Red Dead Redemption 2/:rw" (leave out the quotes)
+
+Close the Bottles app if you already had it opened and left click the RDOLobbyManager.exe and select to open it with the Bottles app.
+
+Once Bottles opens, you will be prompted to create a new bottle. Name it whatever you'd like and in the Environment section select "Application" (this will allow you to run the RDOLobbyManager Windows application)
+
+This might take some time but when its done you will see your bottle in the list. Select it and locate the download folder where you installed RDOLobbyManager.exe in the file explorer that pops up.
+
+(Now this is the lil tricky part)
+
+After RDOLobbyManager opens, you will have to find your RDR2 directory. It still won't show if you try to browse for it through the little file explorer on the left of the application, so you will have to write it in manually on the bottom where it says "File name":
+
+C:\users\deck\.local\share\Steam\steamapps\common\Red Dead Redemption 2\
+
+(MAKE SURE the slashes are exactly written as above and not like how you wrote them in the Flatseal application!)
+
+After writing that in and selecting open it should take you right back to the Lobby Manager and you can finish setting up your lobby info and password as normal. Then select "use" in the lobby manager, close it out and reload into the steam mode on the steam deck and run RDR2 Online. You should be the only one in there!
+
+
+I hope this long tutorial helps! And credit to a post I saw by Reddit user u/tmplshdw for showing where in Flatseal to add the permission :)
