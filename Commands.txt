@@ -75,3 +75,19 @@ sudo swapon swapfile
 ## Cannot Find Fakeroot
 
 pacman -S base-devel
+
+
+## Docker
+
+pacman -Syyu docker 
+
+sudo groupadd docker
+
+sudo usermod -aG docker 
+
+newgrp docker
+
+
+## Yay
+
+sudo pacman -Sy yay
