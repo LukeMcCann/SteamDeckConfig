@@ -69,3 +69,9 @@ sudo dd if=/dev/zero of=swapfile bs=1G count=16
 
 sudo mkswap swapfile
 sudo swapon swapfile
+
+
+
+## Cannot Find Fakeroot
+
+pacman -S base-devel
