@@ -91,3 +91,7 @@ newgrp docker
 ## Yay
 
 sudo pacman -Sy yay
+
+## VSCode
+
+sudo yay -Sy visual-studo-code-binary
